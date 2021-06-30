@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>SIESGST Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .fa {
+      padding: 5px;
+      text-align: center;
+      margin: 1px 1px;
+      font-size: 25px;
+      width: 50px;
+    }
+
+    .fa-facebook {
+
+      color: white;
+    }
+
+    .fa-twitter {
+
+      color: white;
+    }
+
+    .fa-instagram {
+
+      color: white;
+    }
+  </style>
+  <link rel="icon"
+    href="https://play-lh.googleusercontent.com/wiPKIGK49pgf0HqZ-s9QDoMvET41K4Kne2gMFCgteLLn4YtSot8uuTff97dSD3WGnDE=s180-rw"
+    type="image/x-icon">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/index.html">SIESGST Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li>
+            <div class="d-grid gap-2 d-md-block">
+              <a class="btn btn-outline-warning" href="#" role="button" data-bs-toggle="modal"
+                data-bs-target="#registerModal">REGISTER</a>
+              <a class="btn btn-outline-warning mx-1" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"
+                role="button">LOGIN</a>
+            </div>
+          </li>
+
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-light" type="submit">
+            Search
+          </button>
+        </form>
+  </nav>
+
+
+  <!-- REGISTER Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Register to the Portal</h5>
+
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="registerFormControlInput1" class="form-label">Email address :</label>
+            <input type="email" class="form-control" id="registerFormControlInput1" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="registerFormControlInput1" class="form-label">PRN :</label>
+            <input type="Permanent Roll Number" class="form-control" id="registerFormControlInput1"
+              placeholder="120A1001">
+          </div>
+          <div class="mb-3">
+            <label for="registerFormControlInput1" class="form-label">Create Password :</label>
+            <input type="password" class="form-control" id="registerFormControlInput1" placeholder="Abcdefgh@01">
+          </div>
+          <div class="mb-3">
+            <label for="registerFormControlInput1" class="form-label">Confirm Password :</label>
+            <input type="password" class="form-control" id="registerFormControlInput1" placeholder="Abcdefgh@01">
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Close</button>
+          <a class="btn btn-outline-dark" href="/submit.html" role="button">SUBMIT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--LOGIN Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login to the Portal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="loginFormControlInput1" class="form-label">Email address :</label>
+            <input type="email" class="form-control" id="loginFormControlInput1" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="loginFormControlInput1" class="form-label">PRN :</label>
+            <input type="Permanent Roll Number" class="form-control" id="loginFormControlInput1" placeholder="120A1001">
+          </div>
+          <div class="mb-3">
+            <label for="loginFormControlInput1" class="form-label">Password :</label>
+            <input type="password" class="form-control" id="loginFormControlInput1" placeholder="Abcdefgh@01">
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Close</button>
+          <a class="btn btn-outline-dark" href="/login.html" role="button">LOGIN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <main>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <ul>
+            <li>
+              <h2 class="fw-medium">UPCOMING EVENTS</h2>
+            </li>
+          </ul>
+          <p class="lead text-muted my-4">No Upcoming Events</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <ul>
+            <li>
+              <h2 class="fw-medium ">RECENT EVENTS</h2>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      <div class="album py-5 bg-dark my-4">
+        <div class="container">
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="thumb1.jpeg" alt="">
+
+                <div class="card-body bg-light">
+                  <p class="card-text bg-light">
+                  <h5>International Yoga Day Celebration 2021</h5>
+                  <i>
+                    Mon Jun 21 2021
+                  </i></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-outline-warning" href="/view1.html" role="button">View</a>
+                    <small class="text-muted">Organized By NSS SIESGST</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="thumb2.jpeg" alt="">
+
+                <div class="card-body bg-light">
+                  <p class="card-text bg-light">
+                  <h5>Cosplay</h5>
+                  <i>
+                    Sat May 15 2021
+                  </i></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-outline-warning" href="/view2.html" role="button">View</a>
+                    <small class="text-muted">Organized By LIT Team</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="thumb3.jpg" alt="">
+
+                <div class="card-body bg-light">
+                  <p class="card-text bg-light">
+                  <h5>Open Mic 7.0</h5>
+                  <i>
+                    Sat May 15 2021
+                  </i></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-outline-warning" href="view3.html" role="button">View</a>
+                    <small class="text-muted">Organized By Cultural Team</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="thumb4.jpg" alt="">
+
+                <div class="card-body bg-light">
+                  <p class="card-text bg-light">
+                  <h5>FORZA</h5>
+                  <i>
+                    Sat May 15 2021
+                  </i></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-outline-warning" href="/view4.html" role="button">View</a>
+                    <small class="text-muted">Organized By Lady Representative</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-lg">
+                <img src="thumb5.jpg" alt="">
+
+                <div class="card-body bg-light">
+                  <p class="card-text bg-light">
+                  <h5>Zombie-E-Scapade</h5>
+                  <i>
+                    Sat May 15 2021
+                  </i></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-outline-warning" href="/view5.html" role="button">View</a>
+                    <small class="text-muted">Organized By Technical Team</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="thumb6.jpg" alt="">
+
+                <div class="card-body bg-light">
+                  <p class="card-text bg-light">
+                  <h5>VALORANT</h5>
+                  <i>
+                    Fri May 14 2021
+                  </i></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-outline-warning" href="/view6.html" role="button">View</a>
+                    <small class="text-muted">Organized By Sports Team</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-lg">
+                <img src="thumb7.jpg" alt="">
+
+                <div class="card-body bg-light">
+                  <p class="card-text bg-light">
+                  <h5>Automania</h5>
+                  <i>
+                    Fri May 14 2021
+                  </i></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-outline-warning" href="view7.html" role="button">View</a>
+                    <small class="text-muted">Organized By TurboCrafters</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-lg">
+                <img src="thumb8.jpg" alt="">
+
+                <div class="card-body bg-light">
+                  <p class="card-text bg-light">
+                  <h5>PES 2021</h5>
+                  <i>
+                    Fri May 14 2021
+                  </i></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-outline-warning" href="/view8.html" role="button">View</a>
+                    <small class="text-muted">Organized By Sports Team</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-lg">
+                <img src="thumb9.jpg" alt="">
+
+                <div class="card-body bg-light">
+                  <p class="card-text bg-light">
+                  <h5>CHESS</h5>
+                  <i>
+                    Fri May 14 2021
+                  </i></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-outline-warning" href="/view9.html" role="button">View</a>
+                    <small class="text-muted">Organized By Sports Team</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-lg">
+                <img src="thumb10.jpg" alt="">
+
+                <div class="card-body bg-light">
+                  <p class="card-text bg-light">
+                  <h5>BreakOut</h5>
+                  <i>
+                    Fri May 14 2021
+                  </i></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-outline-warning" href="/view10.html" role="button">View</a>
+                    <small class="text-muted">Organized By Cultural Team</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-lg">
+                <img src="thumb11.jpg" alt="">
+
+                <div class="card-body bg-light">
+                  <p class="card-text bg-light">
+                  <h5>Spy-Ops</h5>
+                  <i>
+                    Fri May 14 2021
+                  </i></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-outline-warning" href="/view11.html" role="button">View</a>
+                    <small class="text-muted">Organized By IEEE SIESGST</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="thumb12.png" alt="">
+
+                <div class="card-body bg-light">
+                  <p class="card-text bg-light">
+                  <h5>Bug OFF</h5>
+                  <i>
+                    Fri May 14 2021
+                  </i></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-outline-warning" href="/view12.html" role="button">View</a>
+                    <small class="text-muted">Organized By CodeChef SIESGST</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <footer class="p-2 bg-dark text-white">
+      <p class="float-end">
+        <a href="https://www.facebook.com/SIESGSTEvents/" target="_blank">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com/siesgstevents?lang=en" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/siesgstevents/?hl=en" target="_blank">
+          <i class="fa fa-instagram"></i>
+        </a>
+
+      <p>© 2018-2021 SIESGST</p>
+    </footer>
+
+
+
+  </main>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
